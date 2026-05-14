@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify
 from threading import Thread
 from main import app
