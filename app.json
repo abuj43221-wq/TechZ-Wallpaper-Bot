@@ -13,12 +13,15 @@
     "env": {
         "API_ID": {
             "description": "Get this value from my.telegram.org"
+            "required": true
         },
         "API_HASH": {
             "description": "Get this value from my.telegram.org"
+            "required": true
         },
         "BOT_TOKEN": {
             "description": "Get this from @BotFather"
+            "required": true
         }
     },
     "buildpacks": [
