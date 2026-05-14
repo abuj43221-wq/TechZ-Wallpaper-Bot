@@ -1,5 +1,7 @@
-from main import WALL_API, UNSPLASH_API
 import aiohttp, random
+
+WALL_API = "https://techz-wallpaper-bot-3.onrender.com/wall?query="
+UNSPLASH_API = "https://techz-wallpaper-bot-3.onrender.com/unsplash?query="
 
 async def get_wallpapers(query: str):
     try:
