@@ -1,4 +1,3 @@
-import aiohttp
 from pyrogram import Client
 from config import *
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
