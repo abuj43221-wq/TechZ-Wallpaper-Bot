@@ -12,3 +12,4 @@ app = Client(
 session = None
 print("[INFO]: STARTING MONGO DB CLIENT")
 mongo_client = MongoClient(MONGO_DB_URI)
+db = mongo_client["WallpaperBot"]
