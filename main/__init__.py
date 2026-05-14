@@ -10,12 +10,6 @@ app = Client(
   bot_token=BOT_TOKEN
 )
 
-print("[INFO]: STARTING BOT...")
-app.start()
-
-print("[INFO]: STARTING AIOHTTP CLIENT")
-session = aiohttp.ClientSession()
-
+session = None
 print("[INFO]: STARTING MONGO DB CLIENT")
 mongo_client = MongoClient(MONGO_DB_URI)
-db = mongo_client.walldb
