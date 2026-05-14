@@ -7,22 +7,58 @@ from main.wall import get_wallpapers, get_unsplash
 from main.db_funcs import *
 
 START = """
-**🔮 Hello There, You Can Use Me To Download HD Wallpapers...**
+╭━━━〔 ⚜️ 𝙑𝙄𝙋 𝙒𝘼𝙇𝙇𝙋𝘼𝙋𝙀𝙍 𝙃𝙐𝘽 ⚜️ 〕━━━╮
 
-__High Quality Wallpapers From (http://wall.alphacoders.com) And (http://unsplash.com)__
+      ✦ 𝟰𝗞 • 𝗛𝗗 • 𝗔𝗠𝗢𝗟𝗘𝗗 ✦
+   ⚡ 𝗙𝗮𝘀𝘁 • 𝗣𝗿𝗲𝗺𝗶𝘂𝗺 • 𝗦𝗺𝗼𝗼𝘁𝗵 ⚡
 
-➤ Click /help Or The Button Below To Know How To Use Me
+╰━━━━━━━━━━━━━━━━━━━━━━━━╯
+
+🌐 𝙎𝙤𝙪𝙧𝙘𝙚𝙨:
+➤ https://wall.alphacoders.com
+➤ https://unsplash.com
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 𝙁𝙚𝙖𝙩𝙪𝙧𝙚𝙨:
+➤ 𝗜𝗻𝘀𝘁𝗮𝗻𝘁 𝗪𝗮𝗹𝗹𝗽𝗮𝗽𝗲𝗿 𝗦𝗲𝗮𝗿𝗰𝗵
+➤ 𝗨𝗹𝘁𝗿𝗮 𝗛𝗗 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝘀
+➤ 𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰 & 𝗧𝗿𝗲𝗻𝗱𝗶𝗻𝗴 𝗖𝗼𝗹𝗹𝗲𝗰𝘁𝗶𝗼𝗻𝘀
+➤ 𝗠𝗼𝗯𝗶𝗹𝗲 + 𝗗𝗲𝘀𝗸𝘁𝗼𝗽 𝗦𝘂𝗽𝗽𝗼𝗿𝘁
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+📌 𝙐𝙨𝙚 /help 𝙩𝙤 𝙫𝙞𝙚𝙬 𝙖𝙡𝙡 𝙘𝙤𝙢𝙢𝙖𝙣𝙙𝙨
+💎 𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝘽𝙮 𝙑𝙄𝙋 𝙀𝙣𝙜𝙞𝙣𝙚
 """
 
 HELP = """
-**🖼 How To Use Me ?**
+╭━━━〔 ⚡ 𝙑𝙄𝙋 𝙒𝘼𝙇𝙇𝙋𝘼𝙋𝙀𝙍 𝙂𝙐𝙄𝘿𝙀 ⚡ 〕━━━╮
 
-**To Download Wallpapers -** `/wall <search>`
-**To Download Wallpapers From Unsplash - ** `/unsplash <search>`
+🖼️ 𝙃𝙤𝙬 𝙏𝙤 𝙐𝙨𝙚 𝙈𝙚 ?
 
-**♻️ Example:** 
-`/wall anime`
-`/unsplash cat`
+━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 𝙃𝘿 𝙒𝙖𝙡𝙡𝙥𝙖𝙥𝙚𝙧𝙨:
+➤ `/wall <search>`
+
+🌄 𝙐𝙣𝙨𝙥𝙡𝙖𝙨𝙝 𝙒𝙖𝙡𝙡𝙥𝙖𝙥𝙚𝙧𝙨:
+➤ `/unsplash <search>`
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+♻️ 𝙀𝙭𝙖𝙢𝙥𝙡𝙚𝙨:
+➤ `/wall anime`
+➤ `/wall cyberpunk`
+➤ `/unsplash cat`
+➤ `/unsplash nature`
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+⚡ 𝙁𝙖𝙨𝙩 • 𝙋𝙧𝙚𝙢𝙞𝙪𝙢 • 𝙃𝘿 𝙍𝙚𝙨𝙪𝙡𝙩𝙨
+💎 𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝘽𝙮 𝙑𝙄𝙋 𝙀𝙣𝙜𝙞𝙣𝙚
+
+╰━━━━━━━━━━━━━━━━━━━━━━━━╯
 """
 
 # Commands
