@@ -7,9 +7,9 @@
         "logo",
         "bot"
     ],
-    "repository": "https://github.com/TechShreyash/TechZ-Logo-Maker-Bot",
-    "website": "https://t.me/TechZBots",
-    "success_url": "https://t.me/TechZLogoMakerBot",
+    "repository": "https://github.com/anujedits42-byte/TechZ-Wallpaper-Bot",
+    "website": "https://t.me/anujedits76",
+    "success_url": "https://t.me/wallpaper_anuj_bot",
     "env": {
         "API_ID": {
             "description": "Get this value from my.telegram.org"
