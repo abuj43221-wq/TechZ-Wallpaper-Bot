@@ -2,7 +2,7 @@ from flask import Flask
 from threading import Thread
 from main import app
 import pyrogram, random
-from pyrogram import filters, idle
+from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, CallbackQuery
 from main.wall import get_wallpapers, get_unsplash
@@ -20,7 +20,7 @@ def home():
     """
 
 def run_web():
-    web_app.run(host="0.0.0.0", port=8080)
+    web_app.run(host="0.0.0.0", port=8080, debug=False, use_reloader=False)
 
 def keep_alive():
     t = Thread(target=run_web)
