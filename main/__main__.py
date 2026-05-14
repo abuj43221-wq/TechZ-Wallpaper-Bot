@@ -205,6 +205,5 @@ if __name__ == "__main__":
     print("==========JOIN @log_ak_bot=========")
 
     app.run()
-    idle()
 
     print("[INFO]: BOT STOPPED")
