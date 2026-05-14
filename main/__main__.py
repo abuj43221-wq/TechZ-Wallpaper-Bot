@@ -11,6 +11,10 @@ from main.db_funcs import *
 
 web_app = Flask(__name__)
 
+@web_app.route("/")
+def index():
+    return jsonify({"status": "ok", "bot": "VIP Wallpaper Bot", "message": "Bot is running!"})
+
 @web_app.route("/unsplash")
 async def unsplash_api():
 
