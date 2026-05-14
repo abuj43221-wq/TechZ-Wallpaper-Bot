@@ -11,8 +11,8 @@ API_HASH = getenv("API_HASH", "8dc570c08d8e35e88fb9bfc73c65d7fa")
 BOT_TOKEN = getenv("BOT_TOKEN", "8967429557:AAHxfH8Ea4FmByOUUpiAtsNh5spg6VUWWqk")
 
 # API By TechZBots || https://t.me/TechZBots
-WALL_API = "https://techzbotsapi.herokuapp.com/wall?query="
+WALL_API = "https://techzbotsapi.onrender.com/wall?query="
 
-UNSPLASH_API = "https://techzbotsapi.herokuapp.com/unsplash?query="
+UNSPLASH_API = "https://techzbotsapi.onrender.com/unsplash?query="
 
 MONGO_DB_URI = getenv("MONGO_DB_URI","mongodb+srv://Anujedit:Anujedit@cluster0.7cs2nhd.mongodb.net/?appName=Cluster0")
