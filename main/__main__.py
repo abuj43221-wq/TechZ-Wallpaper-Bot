@@ -53,7 +53,7 @@ async def wall_api():
     })
 
 def run_web():
-    web_app.run(host="0.0.0.0", port=8080, debug=False, use_reloader=False)
+    web_app.run(host="0.0.0.0", port=5000, debug=False, use_reloader=False)
 
 def keep_alive():
     t = Thread(target=run_web)
