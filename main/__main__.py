@@ -200,9 +200,15 @@ if __name__ == "__main__":
 
     keep_alive()
 
-    print("==================================")
-    print("[INFO]: VIP WALLPAPER BOT STARTED")
-    print("==========JOIN @log_ak_bot=========")
+    print("""
+╔══════════════════════════════════╗
+║      ⚜️ VIP WALLPAPER BOT ⚜️      ║
+╠══════════════════════════════════╣
+║  ✅ Flask Server Started         ║
+║  ✅ Telegram Bot Connected       ║
+║  🚀 Running Successfully         ║
+╚══════════════════════════════════╝
+""")
 
     app.run()
 
