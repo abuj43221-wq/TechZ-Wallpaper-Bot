@@ -1,8 +1,10 @@
 from flask import Flask
+from flask import Flask, request, jsonify
 from threading import Thread
 from main import app
 import pyrogram, random
 from pyrogram import filters
+
 from pyrogram.errors import FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, CallbackQuery
 from main.wall import get_wallpapers, get_unsplash
@@ -10,14 +12,42 @@ from main.db_funcs import *
 
 web_app = Flask(__name__)
 
-@web_app.route('/')
-def home():
-    return """
-    <center>
-        <h1>⚜️ VIP WALLPAPER BOT ⚜️</h1>
-        <p>Bot Is Running Successfully ✅</p>
-    </center>
-    """
+@web_app.route("/unsplash")
+async def unsplash_api():
+
+    query = request.args.get("query")
+
+    if not query:
+        return jsonify({
+            "status": False,
+            "error": "Query Missing"
+        })
+
+    data = await get_unsplash(query)
+
+    return jsonify({
+        "status": True,
+        "results": data
+    })
+
+
+@web_app.route("/wall")
+async def wall_api():
+
+    query = request.args.get("query")
+
+    if not query:
+        return jsonify({
+            "status": False,
+            "error": "Query Missing"
+        })
+
+    data = await get_wallpapers(query)
+
+    return jsonify({
+        "status": True,
+        "results": data
+    })
 
 def run_web():
     web_app.run(host="0.0.0.0", port=8080, debug=False, use_reloader=False)
