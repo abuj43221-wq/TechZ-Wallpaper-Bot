@@ -84,11 +84,11 @@ HELP = """
 # Commands
 @app.on_message(filters.command("start"))
 async def start(bot, message: Message):
-  await message.reply_photo("https://telegra.ph/file/dd62dad81f1ace73233d4.jpg",caption=START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu")]]))
+  await message.reply_photo("https://d.uguu.se/bufHoysv.jpg",caption=START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu")]]))
 
 @app.on_message(filters.command("help"))
 async def help(bot, message: Message):
-  await message.reply_photo("https://telegra.ph/file/dd62dad81f1ace73233d4.jpg",caption=HELP,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back", callback_data="start_menu")]]))
+  await message.reply_photo("https://n.uguu.se/zckKRyXB.jpg",caption=HELP,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back", callback_data="start_menu")]]))
 
 @app.on_message(filters.command("wall") & filters.incoming & filters.text & ~filters.forwarded & (
   filters.group | filters.private))
