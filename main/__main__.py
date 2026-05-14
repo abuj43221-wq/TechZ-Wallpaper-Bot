@@ -28,7 +28,7 @@ HELP = """
 # Commands
 @app.on_message(filters.command("start"))
 async def start(bot, message: Message):
-  await message.reply_photo("https://telegra.ph/file/dd62dad81f1ace73233d4.jpg",caption=START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"), InlineKeyboardButton(text="Repo", url="https://github.com/TechShreyash/TechZ-Wallpaper-Bot")]]))
+  await message.reply_photo("https://telegra.ph/file/dd62dad81f1ace73233d4.jpg",caption=START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu")]]))
 
 @app.on_message(filters.command("help"))
 async def help(bot, message: Message):
@@ -38,7 +38,7 @@ async def help(bot, message: Message):
   filters.group | filters.private))
 async def wall(bot, message: Message):
   try:
-    text = message.text.replace("wall","").replace("/","").replace("@TechZWallBot","").strip().upper()
+    text = message.text.replace("wall","").replace("/","").replace("@wallpaper_anuj_bot","").strip().upper()
     
     if text == "":
       return await message.reply_text(HELP)
@@ -47,7 +47,7 @@ async def wall(bot, message: Message):
     wall = await get_wallpapers(text)
       
     if "error" in wall:
-      return await x.edit(f"`❌ Something Went Wrong...`\n\nReport This Error In @TechZBots_Support \n\n`{wall}`")
+      return await x.edit(f"`❌ Something Went Wrong...`\n\nReport This Error In @log_ak_bot \n\n`{wall}`")
     
     if "nonee" in wall:
       return await x.edit(f"`❌ Something Went Wrong...`\n\n`{wall}`")
@@ -58,7 +58,7 @@ async def wall(bot, message: Message):
     
     id = await save_image(img)
 
-    await message.reply_photo(img,caption="**🏞 Wallpaper By @TechZWallBot**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Upload As File 📁", callback_data=f"wall {id}")]]))
+    await message.reply_photo(img,caption="**🏞 Wallpaper By @wallpaper_anuj_bot**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Upload As File 📁", callback_data=f"wall {id}")]]))
     
     await x.delete()
   except FloodWait:
@@ -68,14 +68,14 @@ async def wall(bot, message: Message):
       await x.delete()
     except:
       pass
-    return await message.reply_text("`❌ Something Went Wrong...`\n\nReport This Error In @TechZBots_Support\n\n" + str(e))
+    return await message.reply_text("`❌ Something Went Wrong...`\n\nReport This Error In @anujedits76\n\n" + str(e))
 
 
 @app.on_message(filters.command("unsplash") & filters.incoming & filters.text & ~filters.forwarded & (
   filters.group | filters.private))
 async def unsplash(bot, message: Message):
   try:
-    text = message.text.replace("unsplash","").replace("/","").replace("@TechZWallBot","").strip().upper()
+    text = message.text.replace("unsplash","").replace("/","").replace("@wallpaper_anuj_bot","").strip().upper()
     
     if text == "":
       return await message.reply_text(HELP)
@@ -84,7 +84,7 @@ async def unsplash(bot, message: Message):
     wall = await get_unsplash(text)
       
     if "error" in wall:
-      return await x.edit(f"`❌ Something Went Wrong...`\n\nReport This Error In @TechZBots_Support \n\n`{wall}`")
+      return await x.edit(f"`❌ Something Went Wrong...`\n\nReport This Error In @anujedits76 \n\n`{wall}`")
     
     if "nonee" in wall:
       return await x.edit(f"`❌ Something Went Wrong...`\n\n`{wall}`")
@@ -95,7 +95,7 @@ async def unsplash(bot, message: Message):
 
     id = await save_image(wall)
     
-    await message.reply_photo(wall,caption="**🏞 Wallpaper By @TechZWallBot**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Upload As File 📁", callback_data=f"wall {id}")]]))
+    await message.reply_photo(wall,caption="**🏞 Wallpaper By @anujedits76**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Upload As File 📁", callback_data=f"wall {id}")]]))
     
     await x.delete()
   except FloodWait:
@@ -105,13 +105,13 @@ async def unsplash(bot, message: Message):
       await x.delete()
     except:
       pass
-    return await message.reply_text("`❌ Something Went Wrong...`\n\nReport This Error In @TechZBots_Support")
+    return await message.reply_text("`❌ Something Went Wrong...`\n\nReport This Error In @anujedits76")
     
 # Callbacks
 @app.on_callback_query(filters.regex("start_menu"))
 async def start_menu(_,query):
   await query.answer()
-  await query.message.edit(START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"),InlineKeyboardButton(text="Repo", url="https://github.com/TechShreyash/TechZ-Wallpaper-Bot")]]))
+  await query.message.edit(START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu")]]))
 
 @app.on_callback_query(filters.regex("help_menu"))
 async def help_menu(_,query):
@@ -126,13 +126,13 @@ async def logo_doc(_,query):
     await query.message.edit_reply_markup(reply_markup=None)
     id = query.data.replace("wall","").strip()
     link = await get_image(id)
-    await query.message.reply_document(link,caption="**🏞 Wallpaper By @TechZWallBot**")
+    await query.message.reply_document(link,caption="**🏞 Wallpaper By @log_ak_bot**")
     await del_image(id)
   except FloodWait:
     pass
   except Exception as e:
     try:
-      return await x.edit(f"`❌ Something Went Wrong...`\n\nReport This Error In @TechZBots_Support \n\n`{str(e)}`")
+      return await x.edit(f"`❌ Something Went Wrong...`\n\nReport This Error In @log_ak_bot \n\n`{str(e)}`")
     except:
       return
     
@@ -142,7 +142,7 @@ async def logo_doc(_,query):
 if __name__ == "__main__":
   print("==================================")
   print("[INFO]: WALLPAPER BOT STARTED BOT SUCCESSFULLY")
-  print("==========JOIN @TECHZBOTS=========")
+  print("==========JOIN @log_ak_bot=========")
 
   idle()
   print("[INFO]: WALLPAPER BOT STOPPED")
